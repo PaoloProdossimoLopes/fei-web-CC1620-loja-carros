@@ -10,7 +10,7 @@ const configureRenderEngine = require('./middleware/engine');
 const configureParser = require('./middleware/parser');
 
 const application = express();
-mongoose.connect('mongodb://localhost:27017/aula')
+
 configureRenderEngine(application);
 configureParser(application);
 
@@ -21,4 +21,7 @@ configureManagerRoute(application);
 configureSaletRoute(application);
 
 const port = 8080;
-application.listen(port, console.log(`available ON at http://localhost:${port}`));
+application.listen(port, () => { 
+  mongoose.connect('mongodb://localhost:27017/aula');
+  console.log(`available ON at http://localhost:${port}`) 
+});

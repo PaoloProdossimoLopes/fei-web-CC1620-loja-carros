@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <h1>List</h1>
+
+<div>
+    <% for(let i = 0; i < cars.length; i++) { %>
+        <div class="car-box">
+            <p><b>Nome:</b> <%= cars[i].name %></p>
+            <p><b>Model:</b> <%= cars[i].model %></p>
+            <p><b>QTD:</b> <%= cars[i].qtd %></p><br>
+        </div>
+    <% } %>
+</div>
+
 </body>
 </html>

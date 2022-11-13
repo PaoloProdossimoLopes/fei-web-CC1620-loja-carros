@@ -5,6 +5,58 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Manager</h1>
+    <h1>Register</h1>
+    <form method="post" action="/addCar">
+        <p>
+            <label for="name">Name:</label>
+            <input id="name" name="name" required="compo obrigatorio!" type="text" placeholder="ex. nomde">
+        </p>
+        <p>
+            <label for="model">Model:</label>
+            <input id="model" name="model" required="compo obrigatorio!" type="text" placeholder="ex. model">
+        </p>
+        <p>
+            <label for="year">Year:</label>
+            <input id="year" name="year" required="compo obrigatorio!" type="text" placeholder="ex. year">
+        </p>
+        <p>
+            <label for="qtd">Email:</label>
+            <input id="qtd" name="qtd" required="compo obrigatorio!" type="text" placeholder="ex. qtd">
+        </p>
+        <input type="submit" value="Cadastrar novo carro" >
+    </form>
+
+    <h1>Remove</h1>
+    <form method="post" action="/removeCar">
+        <p>
+            <label for="name">Name:</label>
+            <input id="name" name="name" required="compo obrigatorio!" type="text" placeholder="ex. nomde">
+        </p>
+        <input type="submit" value="Remove carro" >
+    </form>
+
+    <h1>Update</h1>
+    <form method="post" action="/updateCar">
+        <div>
+            <p>
+                <label for="newQTD">New QTD:</label>
+                <input id="newQTD" name="newQTD" required="compo obrigatorio!" type="text" placeholder="ex. qtd">
+            </p>
+        </div>
+        <div>
+            <p>
+                <label for="oldName">Name:</label>
+                <input id="oldName" name="oldName" required="compo obrigatorio!" type="text" placeholder="ex. nomde">
+            </p>
+        </div>
+        <input type="submit" value="Atualizar carro" >
+    </form>
+
+    <div>
+        <h1>Lista de carros</h1>
+        <form method="post" action="/list">
+            <input type="submit" value="Ver lista">
+        </form>
+    </div>
 </body>
 </html>

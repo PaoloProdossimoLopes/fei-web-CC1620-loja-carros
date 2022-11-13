@@ -1,4 +1,7 @@
+const configureUserRouters = require('./manager-routes')
+
 function configureManagerRoute(application) {
+    configureUserRouters(application)
     const endpoint = '/manager'
 
     // GET Route
