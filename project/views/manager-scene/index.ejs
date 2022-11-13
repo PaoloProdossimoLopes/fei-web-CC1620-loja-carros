@@ -32,18 +32,6 @@
             <label for="name">Name:</label>
             <input id="name" name="name" required="compo obrigatorio!" type="text" placeholder="ex. nomde">
         </p>
-        <p>
-            <label for="model">Model:</label>
-            <input id="model" name="model" required="compo obrigatorio!" type="text" placeholder="ex. model">
-        </p>
-        <p>
-            <label for="year">Year:</label>
-            <input id="year" name="year" required="compo obrigatorio!" type="text" placeholder="ex. year">
-        </p>
-        <p>
-            <label for="qtd">Email:</label>
-            <input id="qtd" name="qtd" required="compo obrigatorio!" type="text" placeholder="ex. qtd">
-        </p>
         <input type="submit" value="Remove carro" >
     </form>
 
@@ -51,19 +39,7 @@
     <form method="post" action="/updateCar">
         <div>
             <p>
-                <label for="newName">Name:</label>
-                <input id="newName" name="newName" required="compo obrigatorio!" type="text" placeholder="ex. nomde">
-            </p>
-            <p>
-                <label for="newModel">Model:</label>
-                <input id="newModel" name="newModel" required="compo obrigatorio!" type="text" placeholder="ex. model">
-            </p>
-            <p>
-                <label for="newYear">Year:</label>
-                <input id="newYear" name="newYear" required="compo obrigatorio!" type="text" placeholder="ex. year">
-            </p>
-            <p>
-                <label for="newQTD">Email:</label>
+                <label for="newQTD">New QTD:</label>
                 <input id="newQTD" name="newQTD" required="compo obrigatorio!" type="text" placeholder="ex. qtd">
             </p>
         </div>
@@ -72,20 +48,15 @@
                 <label for="oldName">Name:</label>
                 <input id="oldName" name="oldName" required="compo obrigatorio!" type="text" placeholder="ex. nomde">
             </p>
-            <p>
-                <label for="oldModel">Model:</label>
-                <input id="oldModel" name="oldModel" required="compo obrigatorio!" type="text" placeholder="ex. model">
-            </p>
-            <p>
-                <label for="oldYear">Year:</label>
-                <input id="oldYear" name="oldYear" required="compo obrigatorio!" type="text" placeholder="ex. year">
-            </p>
-            <p>
-                <label for="oldQTD">Email:</label>
-                <input id="oldQTD" name="oldQTD" required="compo obrigatorio!" type="text" placeholder="ex. qtd">
-            </p>
         </div>
         <input type="submit" value="Atualizar carro" >
     </form>
+
+    <div>
+        <h1>Lista de carros</h1>
+        <form method="post" action="/list">
+            <input type="submit" value="Ver lista">
+        </form>
+    </div>
 </body>
 </html>
