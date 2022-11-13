@@ -1,14 +1,7 @@
-const mongoose = require('mongoose');
+const UserModel = require('../models/user-model');
 
 const configureLoginRoute = ((application) => {
     const endpoint = '/login';
-
-    const schema = new mongoose.Schema({
-        email: String,
-        password: String,
-        name: String
-    })
-    const model = mongoose.model('User', schema)
 
     // GET Route
     application.get(endpoint, (request, response) => {
@@ -19,9 +12,14 @@ const configureLoginRoute = ((application) => {
     application.post(endpoint, (request, response) => {
         const email = request.body?.emailField
         const password = request.body?.passwordField
-        model.find({ email,  password }, (error, object) => {
-            console.error('Error:', error)
-            console.log('object:', object)
+        UserModel.findOne({ email: email, password: password }, (error, user) => {
+            if (error) {
+                return response.send('Ocorreu um problema inesperado!')
+            } else if (user) {
+                return response.send(`Ola ${user.name}, voce foi cadastrado com sucesso!`)
+            } else {
+                return response.send('Dados invalidos!')
+            }
         })
     });
 });

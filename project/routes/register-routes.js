@@ -1,14 +1,8 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const UserModel = require('../models/user-model');
 
 function configureRegisterRoute(application) {
     const endpoint = '/register'
-
-    const schema = new mongoose.Schema({
-        email: String,
-        password: String,
-        name: String
-    })
-    const UserModel = mongoose.model('UserModel', schema)
 
     // GET
     application.get(endpoint, (request, response) => {
