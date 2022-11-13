@@ -16,7 +16,7 @@ const configureLoginRoute = ((application) => {
             if (error) {
                 return response.send('Ocorreu um problema inesperado!')
             } else if (user) {
-                return response.send(`Ola ${user.name}, voce foi cadastrado com sucesso!`)
+                return response.render('./manager-scene/index')
             } else {
                 return response.send('Dados invalidos!')
             }

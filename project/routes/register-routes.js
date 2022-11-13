@@ -30,7 +30,7 @@ function configureRegisterRoute(application) {
             if (error) {
                 return response.send('Falha ao registrar!')
             } else if (user) {
-                return response.send(`Ola ${name}, voce foi cadastrado com sucesso!`)
+                return response.redirect('/login')
             } else {
                 return response.send('Ocorreu um problema inesperado!')
             }
