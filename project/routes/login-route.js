@@ -1,7 +1,9 @@
 const configureLoginRoute = ((application) => {
+    const endpoint = '/login';
+
     // GET Route
-    application.get('/' || '/login', (request, response) => {
-        response.send('Vode esta na rota de login!');
+    application.get(endpoint, (request, response) => {
+        response.redirect('/login-scene/index.html')
     });
 
     //TODO: POST Implementation here

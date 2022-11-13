@@ -1,7 +1,9 @@
 function configureRegisterRoute(application) {
+    const endpoint = '/register'
+
     // GET
-    application.get('/register', (request, response) => {
-        response.send('Voce esta na rota de cadastro!');
+    application.get(endpoint, (request, response) => {
+        response.redirect('/register-scene/index.html')
     });
 
     //TODO: POST Implementation here

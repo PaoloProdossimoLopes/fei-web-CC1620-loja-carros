@@ -6,7 +6,7 @@ function configureRenderEngine(application) {
     application.engine('html', ejs.renderFile);
     application.set('view engine', 'html');
     application.set('view engine', 'ejs');
-    application.set('views', path.join(__dirname, 'views'));
+    application.set('views', path.join(__dirname, '../views'));
 
     application.use('/public', express.static(path.join(__dirname, 'public')));
     application.use(express.static('./public'));
