@@ -6,7 +6,12 @@ const configureLoginRoute = ((application) => {
         response.redirect('/login-scene/index.html')
     });
 
-    //TODO: POST Implementation here
+    // POST
+    application.post(endpoint, (request, response) => {
+        const email = request.body?.emailField
+        const password = request.body?.passwordField
+
+    });
 });
 
 module.exports = configureLoginRoute

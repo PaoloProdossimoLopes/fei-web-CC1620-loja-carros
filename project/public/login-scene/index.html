@@ -10,18 +10,18 @@
     <div class="title">
         <h1>LOGIN</h1>
     </div>
-    <div>
+    <div class="container">
         <form method="post" action="/login">
             <p>
-                <label for="name-field">Email:</label>
-                <input id="name-field" name="name-field" required="compo obrigatorio!" type="text" placeholder="ex. nome@mail.com">
+                <label for="emailField">Email:</label>
+                <input id="emailField" name="emailField" required="compo obrigatorio!" type="text" placeholder="ex. nome@mail.com">
             </p>
             <p>
-                <label for="password-field">Senha:</label>
-                <input id="password-field" name="password-field" required="compo obrigatorio!" type="text" placeholder="ex. exemplo123">
+                <label for="passwordField">Senha:</label>
+                <input id="passwordField" name="passwordField" required="compo obrigatorio!" type="text" placeholder="ex. exemplo123">
             </p>
 
-            <p> <input type="submit" value="Entrar"> </p>
+            <p> <input type="submit" value="Entrar" formmethod="post"> </p>
         </form>
     </div>
 </div>
