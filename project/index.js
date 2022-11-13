@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose')
 
 const configureLoginRoute = require('./routes/login-route');
 const configureRegisterRoute = require('./routes/register-routes');
@@ -9,7 +10,7 @@ const configureRenderEngine = require('./middleware/engine');
 const configureParser = require('./middleware/parser');
 
 const application = express();
-
+mongoose.connect('mongodb://localhost:27017/aula')
 configureRenderEngine(application);
 configureParser(application);
 
