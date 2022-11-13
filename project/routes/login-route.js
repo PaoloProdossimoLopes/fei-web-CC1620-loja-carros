@@ -5,7 +5,8 @@ const configureLoginRoute = ((application) => {
 
     const schema = new mongoose.Schema({
         email: String,
-        password: String
+        password: String,
+        name: String
     })
     const model = mongoose.model('User', schema)
 
