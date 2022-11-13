@@ -1,13 +1,11 @@
 const express = require('express');
+const configureLoginRoute = require('./routes/login-route');
+const configureRegisterRoute = require('./routes/register-routes');
+
 const application = express();
 
-application.get('/' || '/login', (request, response) => {
-    response.send('Vode esta na rota de login!');
-});
-
-application.get('/Cadastro', (request, response) => {
-    response.send('Voce esta na rota de cadastro!');
-});
+configureLoginRoute(application);
+configureRegisterRoute(application);
 
 const port = 8080;
 application.listen(port, console.log(`available on http://localhost:${port}`));
