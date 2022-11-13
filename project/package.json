@@ -1,0 +1,11 @@
+{
+  "name": "loja",
+  "version": "1.0.0",
+  "description": "Essa aplicacao serve apenas apra estudo da integraçao do front web com o banco de dados (mongo)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paolo Prodossimo Lopes",
+  "license": "ISC"
+}
